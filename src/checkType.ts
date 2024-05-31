@@ -6,10 +6,10 @@
  * @example
  *
  * checkType({})
- * => 'object'
+ * => 'Object'
  */
 const checkType = (data: any): string => {
     const type = Object.prototype.toString.call(data);
-    return type.slice(8, -1).toLowerCase();
+    return type.slice(8, -1);
 }
 export default checkType

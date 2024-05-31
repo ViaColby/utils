@@ -1,4 +1,4 @@
-import checkType from "@/check-type";
+import checkType from "@/checkType";
 
 const utils = {
     checkType
