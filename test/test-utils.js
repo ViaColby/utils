@@ -1,7 +1,16 @@
-// test value
-const map = Map ? new Map() : null;
-const weakMap = WeakMap ? new WeakMap() : null;
-const set = Set ? new Set() : null;
-const weakSet = WeakSet ? new WeakSet() : null;
+const root = (typeof global === 'object' && global) || this;
 
-export { map, weakMap, set, weakSet };
+const Map = root.Map;
+const Set = root.Set;
+const Symbol = root.Symbol;
+const WeakMap = root.WeakMap;
+const WeakSet = root.WeakSet;
+
+/** test value * */
+const map = Map ? new Map() : undefined;
+const weakMap = WeakMap ? new WeakMap() : undefined;
+const set = Set ? new Set() : undefined;
+const weakSet = WeakSet ? new WeakSet() : undefined;
+const symbol = Symbol ? Symbol('a') : undefined;
+
+export { map, weakMap, set, weakSet, symbol };

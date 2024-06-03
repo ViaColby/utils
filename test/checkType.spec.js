@@ -1,69 +1,21 @@
 import checkType from '../src/checkType';
+import { map, weakMap, set, weakSet, symbol } from './test-utils';
 
 describe('checkType', () => {
-    it('check String', () => {
-        const result = checkType('');
-        expect(result).toBe('String');
-    });
-
-    it('check Number', () => {
-        const result = checkType(0);
-        expect(result).toBe('Number');
-    });
-
-    it('check Boolean', () => {
-        const result = checkType(true);
-        expect(result).toBe('Boolean');
-    });
-
-    it('check Null', () => {
-        const result = checkType(null);
-        expect(result).toBe('Null');
-    });
-
-    it('check Undefined', () => {
-        const result = checkType(undefined);
-        expect(result).toBe('Undefined');
-    });
-
-    it('check Array', () => {
-        const result = checkType([]);
-        expect(result).toBe('Array');
-    });
-
-    it('check Object', () => {
-        const result = checkType({});
-        expect(result).toBe('Object');
-    });
-
-    it('check Function', () => {
+    it('should return the correct type of the value', () => {
+        expect(checkType('1')).toBe('String');
+        expect(checkType(0)).toBe('Number');
+        expect(checkType(false)).toBe('Boolean');
+        expect(checkType(null)).toBe('Null');
+        expect(checkType(undefined)).toBe('Undefined');
+        expect(checkType([])).toBe('Array');
+        expect(checkType({})).toBe('Object');
         const fun = () => {};
-        const result = checkType(fun);
-        expect(result).toBe('Function');
-    });
-
-    it('check Symbol', () => {
-        const result = checkType(Symbol(1));
-        expect(result).toBe('Symbol');
-    });
-
-    it('check Map', () => {
-        const result = checkType(new Map());
-        expect(result).toBe('Map');
-    });
-
-    it('check Set', () => {
-        const result = checkType(new Set());
-        expect(result).toBe('Set');
-    });
-
-    it('check WeakMap', () => {
-        const result = checkType(new WeakMap());
-        expect(result).toBe('WeakMap');
-    });
-
-    it('check WeakSet', () => {
-        const result = checkType(new WeakSet());
-        expect(result).toBe('WeakSet');
+        expect(checkType(fun)).toBe('Function');
+        expect(checkType(symbol)).toBe('Symbol');
+        expect(checkType(map)).toBe('Map');
+        expect(checkType(set)).toBe('Set');
+        expect(checkType(weakMap)).toBe('WeakMap');
+        expect(checkType(weakSet)).toBe('WeakSet');
     });
 });
