@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo -e "------------------- 正在执行commit-lint校验 --------------------"
+
+npx --no-install commitlint --edit $1

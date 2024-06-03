@@ -36,6 +36,12 @@ describe('checkType', () => {
         expect(result).toBe('Object');
     });
 
+    it('check Function', () => {
+        const fun = () => {};
+        const result = checkType(fun);
+        expect(result).toBe('Function');
+    });
+
     it('check Symbol', () => {
         const result = checkType(Symbol(1));
         expect(result).toBe('Symbol');

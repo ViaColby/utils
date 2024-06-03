@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo -e "------------------- 正在对提交的代码执行操作 --------------------"
+
+npx --no-install lint-staged
