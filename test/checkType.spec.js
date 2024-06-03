@@ -1,4 +1,4 @@
-import checkType from "../src/checkType";
+import checkType from '../src/checkType';
 
 describe('checkType', () => {
     it('check String', () => {

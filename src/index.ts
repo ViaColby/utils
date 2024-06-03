@@ -1,7 +1,7 @@
-import checkType from "@/checkType";
+import checkType from '@/checkType';
 
 const utils = {
-    checkType
-}
+    checkType,
+};
 
-export default utils
+export default utils;

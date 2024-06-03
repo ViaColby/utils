@@ -1,14 +1,29 @@
 {
-  "extends": "./tsconfig.base.json",
   "compilerOptions": {
     "outDir": "lib",
     "rootDir": "./src",
+    "declaration": true,
+    "declarationMap": true,
+    "emitDeclarationOnly": true,
+    "esModuleInterop": true,
+    "lib": ["ESNext","dom", "es2015", "es2016", "es2017", "es2018", "es2019", "es2020"],
+    "module": "esnext",
+    "moduleResolution": "node",
+    "target": "es2020",
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    // Enhance strictness.
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "strict": true
   },
   "include": [
     "src/**/*.ts",
     "src/**/*.tsx"
   ],
   "exclude": [
-    "test/**/*.spec.ts",
+    "test/**/*.spec.js",
   ]
 }
