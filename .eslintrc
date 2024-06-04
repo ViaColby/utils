@@ -31,7 +31,6 @@
   ],
   "rules": {
     "prettier/prettier": "error",
-             // Overridden
     "camelcase": ["error", { "properties": "never", "allow": [ "W[0-9]+_"] }],
     "import/extensions": "off",
     "no-eval": "off",

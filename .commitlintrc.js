@@ -18,7 +18,7 @@ module.exports = {
                 'ci', // 修改项目继续集成流程（Travis，Jenkins，GitLab CI，Circle等）
                 'docs', // 文档
                 'feat', // 新增功能
-                'fix', // bug 修复
+                'fix', // bug修复
                 'perf', // 性能优化
                 'refactor', // 重构
                 'release', // 版本发布
