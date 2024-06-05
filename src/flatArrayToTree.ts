@@ -1,14 +1,12 @@
-import { UnknownObject } from '@/index';
-
 /**
  * Transform the list into a tree structure
  *
- * @param {UnknownObject[]} list The list to transform
+ * @param {FlatArrayItem[]} list The list to transform
  * @param {TreeTransformOption} option Optional item data source
  * @param {string} option.pidKey Specify the parent id attribute name of a node
  * @param {string} option.idKey Specify the id attribute name of a node
  * @param {string} option.childrenKey Specify the child node attribute name of a node
- * @returns {UnknownObject[]} Returns the tree structure list.
+ * @returns {FlatArrayItem[]} Returns the tree structure list.
  *
  * @example
  * const list = [
@@ -37,6 +35,10 @@ import { UnknownObject } from '@/index';
  *
  */
 
+export interface FlatArrayItem {
+    [key: string]: any;
+}
+
 export interface TreeTransformOption {
     pidKey?: string;
     idKey?: string;
@@ -44,17 +46,17 @@ export interface TreeTransformOption {
 }
 
 const flatArrayToTree = (
-    list: UnknownObject[],
+    list: FlatArrayItem[],
     option: TreeTransformOption = { pidKey: 'pid', idKey: 'id', childrenKey: 'children' },
-): UnknownObject[] => {
+): FlatArrayItem[] => {
     // define keys
     const pidKey = option?.pidKey || 'pid';
     const idKey = option?.idKey || 'id';
     const childrenKey = option?.childrenKey || 'children';
     // define an id mapping object
-    const map: UnknownObject = {};
+    const map: FlatArrayItem = {};
     // define a result array to return
-    const result: UnknownObject[] = [];
+    const result: FlatArrayItem[] = [];
 
     // build id mapping table
     list.forEach(node => {

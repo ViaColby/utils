@@ -1,13 +1,17 @@
 import checkType from '@/checkType';
 import isEmpty from '@/isEmpty';
-
-export interface UnknownObject {
-    [key: string]: any;
-}
+import downloadByUrl from '@/downloadByUrl';
+import downloadByFileStream from '@/downloadByFileStream';
+import flatArrayToTree from '@/flatArrayToTree';
 
 const utils = {
     checkType,
+    downloadByUrl,
+    downloadByFileStream,
+    flatArrayToTree,
     isEmpty,
 };
 
 export default utils;
+
+export { checkType, downloadByUrl, downloadByFileStream, flatArrayToTree, isEmpty };
