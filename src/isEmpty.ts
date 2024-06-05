@@ -27,9 +27,9 @@ const isEmpty = (data: any): boolean => {
         return !data.size;
     }
     // object
-    if (['Object'].includes(dataType)) {
+    if (dataType === 'Object') {
         return Object.keys(data).length === 0;
     }
-    return true;
+    return dataType !== 'Function';
 };
 export default isEmpty;

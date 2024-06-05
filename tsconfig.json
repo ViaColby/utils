@@ -3,8 +3,7 @@
     "outDir": "lib",
     "rootDir": "./src",
     "declaration": true,
-    "declarationMap": true,
-    "emitDeclarationOnly": true,
+//    "emitDeclarationOnly": true,
     "esModuleInterop": true,
     "lib": ["ESNext","dom", "es2015", "es2016", "es2017", "es2018", "es2019", "es2020"],
     "module": "esnext",
@@ -16,7 +15,9 @@
     },
     "noImplicitReturns": true,
     "noUnusedLocals": true,
-    "strict": true
+    "strict": true,
+    "strictFunctionTypes": false,
+    "skipLibCheck": true
   },
   "include": [
     "src/**/*.ts",

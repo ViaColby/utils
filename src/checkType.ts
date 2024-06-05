@@ -1,7 +1,7 @@
 /**
  * Check data type
  *
- * @param {any} data data which needs to checked
+ * @param {any} data the value to check
  * @returns {string} Returns the data type.
  * @example
  *
