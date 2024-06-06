@@ -1,6 +1,6 @@
 {
   "name": "@liuqisiwu/utils",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "utils for business",
   "private": false,
   "publishConfig": {
@@ -11,7 +11,9 @@
     "type": "git",
     "url": "https://github.com/ViaColby/business-utils.git"
   },
-  "keywords": ["utils"],
+  "keywords": [
+    "utils"
+  ],
   "author": "",
   "license": "MIT",
   "bugs": {
@@ -64,7 +66,7 @@
     "prettier": "3.0.3"
   },
   "lint-staged": {
-    "test/**/*.spec.js" : "npm run test",
+    "test/**/*.spec.js": "npm run test",
     "src/**/*.ts": [
       "eslint --fix"
     ]
