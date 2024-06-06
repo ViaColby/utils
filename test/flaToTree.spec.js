@@ -1,4 +1,4 @@
-import flatArrayToTree from '../src/flatArrayToTree';
+import flatToTree from '../src/flatToTree';
 
 describe('flatArrayToTree', () => {
     it('should return the correct tree list with default options', () => {
@@ -8,7 +8,7 @@ describe('flatArrayToTree', () => {
             { id: 3, pid: null },
             { id: 4, pid: 3 },
         ];
-        const tree = flatArrayToTree(list);
+        const tree = flatToTree(list);
         expect(tree).toStrictEqual([
             {
                 id: 1,
@@ -31,10 +31,10 @@ describe('flatArrayToTree', () => {
             { uuid: 4, parentId: 3 },
             { uuid: 5, parentId: 4 },
         ];
-        const tree = flatArrayToTree(list, {
-            idKey: 'uuid',
-            pidKey: 'parentId',
-            childrenKey: 'child',
+        const tree = flatToTree(list, {
+            id: 'uuid',
+            parent: 'parentId',
+            children: 'child',
         });
         expect(tree).toStrictEqual([
             {
@@ -54,5 +54,10 @@ describe('flatArrayToTree', () => {
                 ],
             },
         ]);
+    });
+
+    it('should return [] with no parameters', () => {
+        const result = flatToTree();
+        expect(result).toStrictEqual([]);
     });
 });

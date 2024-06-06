@@ -2,16 +2,16 @@ import checkType from '@/checkType';
 import isEmpty from '@/isEmpty';
 import downloadByUrl from '@/downloadByUrl';
 import downloadByFileStream from '@/downloadByFileStream';
-import flatArrayToTree from '@/flatArrayToTree';
+import flatToTree from '@/flatToTree';
+import findBranches from '@/findBranches';
+import findNodes from '@/findNodes';
 
-const utils = {
+export {
     checkType,
     downloadByUrl,
     downloadByFileStream,
-    flatArrayToTree,
+    findBranches,
+    findNodes,
+    flatToTree,
     isEmpty,
 };
-
-export default utils;
-
-export { checkType, downloadByUrl, downloadByFileStream, flatArrayToTree, isEmpty };

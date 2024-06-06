@@ -13,5 +13,6 @@ describe('isEmpty', () => {
         expect(isEmpty([0])).toBe(false);
         expect(isEmpty({ a: 0 })).toBe(false);
         expect(isEmpty('0')).toBe(false);
+        expect(isEmpty(() => {})).toBe(false);
     });
 });

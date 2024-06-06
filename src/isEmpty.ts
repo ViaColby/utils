@@ -2,7 +2,7 @@ import checkType from '@/checkType';
 /**
  * Checks if `data` is an empty object, collection, map, or set.
  *
- * @param {any} data The value to check
+ * @param {*} data The value to check
  * @returns {boolean} Returns 'true' if 'data' is empty, else 'false'.
  * @example
  *
@@ -18,12 +18,12 @@ const isEmpty = (data: any): boolean => {
         return true;
     }
     const dataType = checkType(data);
-    // array string
-    if (['Array', 'String'].includes(dataType)) {
+    // array string arguments uint8Array buffer
+    if (['Array', 'String', 'Arguments', 'Uint8Array'].includes(dataType)) {
         return !data.length;
     }
-    // map set
-    if (['Map', 'Set'].includes(dataType)) {
+    // map set blob
+    if (['Map', 'Set', 'Blob'].includes(dataType)) {
         return !data.size;
     }
     // object
