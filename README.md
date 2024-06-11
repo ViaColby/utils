@@ -4,8 +4,7 @@
 ![GitHub License](https://img.shields.io/github/license/ViaColby/utils)
 
 ## 😃 简介 Introduction
-整理前端日常开发工作中所用到的utils。</br>
-Organize utils used in daily front-end development work.
+整理前端日常开发工作中所用到的utils。
 
 ## 😊 安装 Installation
 ```bash
