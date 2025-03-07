@@ -41,7 +41,7 @@ export interface TreeTransformOption {
     children?: string;
 }
 
-const flatToTree = (list: Record<string, any>[], options?: TreeTransformOption): any => {
+export const flatToTree = (list: Record<string, any>[], options?: TreeTransformOption): any => {
     // define a result array to return
     const result: Array<Record<string, any>> = [];
 
@@ -73,5 +73,3 @@ const flatToTree = (list: Record<string, any>[], options?: TreeTransformOption):
 
     return result;
 };
-
-export default flatToTree;

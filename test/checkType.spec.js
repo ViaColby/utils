@@ -1,4 +1,4 @@
-import checkType from '../src/checkType';
+import { checkType } from '../src';
 import { map, weakMap, set, weakSet, symbol } from './test-utils';
 
 describe('checkType', () => {

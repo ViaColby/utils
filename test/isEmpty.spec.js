@@ -1,4 +1,4 @@
-import isEmpty from '../src/isEmpty';
+import { isEmpty } from '../src';
 import { map, set } from './test-utils';
 
 describe('isEmpty', () => {

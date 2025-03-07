@@ -20,7 +20,7 @@
  *
  */
 
-const findNodes = (
+export const findNodes = (
     tree: Record<string, any>[],
     cb: (node: Record<string, any>) => boolean,
     children: string = 'children',
@@ -39,5 +39,3 @@ const findNodes = (
 
     return result;
 };
-
-export default findNodes;

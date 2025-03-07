@@ -18,7 +18,7 @@
  *
  */
 
-const findBranches = (
+export const findBranches = (
     tree: Record<string, any>[],
     cb: (node: Record<string, any>) => boolean, // parameter 'node': current node
     children: string = 'children',
@@ -31,5 +31,3 @@ const findBranches = (
         return cb(node) || (node[children] && node[children].length);
     });
 };
-
-export default findBranches;

@@ -1,4 +1,4 @@
-import findNodes from '../src/findNodes';
+import { findNodes } from '../src';
 
 describe('findNodes', () => {
     it('should return an array of nodes that match the filter', () => {

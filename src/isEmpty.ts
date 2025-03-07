@@ -1,4 +1,4 @@
-import checkType from '@/checkType';
+import { checkType } from '@/checkType';
 /**
  * Checks if `data` is an empty object, collection, map, or set.
  *
@@ -12,7 +12,7 @@ import checkType from '@/checkType';
  * isEmpty([1, 2])
  * // => false
  */
-const isEmpty = (data: any): boolean => {
+export const isEmpty = (data: any): boolean => {
     // null or undefined
     if (data == null) {
         return true;
@@ -32,4 +32,3 @@ const isEmpty = (data: any): boolean => {
     }
     return dataType !== 'Function';
 };
-export default isEmpty;
