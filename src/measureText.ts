@@ -1,10 +1,10 @@
 /**
- * calc font length in html
+ * measure text length in html
  * @param text text in html
  * @param font CSS shorthand property string
  */
 
-export const calcFontLength = (text: string, font: string) => {
+export const measureText = (text: string, font: string) => {
     let canvas: HTMLCanvasElement | null;
     let ctx: CanvasRenderingContext2D | null;
 
@@ -17,5 +17,3 @@ export const calcFontLength = (text: string, font: string) => {
     ctx = null;
     return Math.ceil(metrics.width);
 };
-
-export default calcFontLength;
