@@ -4,8 +4,7 @@
 ![GitHub License](https://img.shields.io/github/license/ViaColby/utils)
 
 ## 😃 简介 Introduction
-整理前端日常开发工作中所用到的utils。</br>
-Organize utils used in daily front-end development work.
+整理前端日常开发工作中所用到的utils。
 
 ## 😊 安装 Installation
 ```bash
@@ -72,12 +71,12 @@ console.log(isEmpty(new Map()))   // => true
 
 ### 文件下载
 
-#### [downloadByUrl](https://github.com/ViaColby/utils/blob/main/src/downloadByUrl.ts#L9)
+#### [download](https://github.com/ViaColby/utils/blob/main/src/downloadByUrl.ts#L9)
 通过url下载文件
 ```js
-import { downloadByUrl } from '@liuqisiwu/utils';
+import { download } from '@liuqisiwu/utils';
 
-downloadByUrl('http://www.xxxxx.com', 'filename');
+download('http://www.xxxxx.com', 'filename');
 ```
 
 #### [downloadByFileStream](https://github.com/ViaColby/utils/blob/main/src/downloadByFileStream.ts#L12)

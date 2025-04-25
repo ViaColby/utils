@@ -1,4 +1,4 @@
-import findBranches from '../src/findBranches';
+import { findBranches } from '../src';
 
 describe('findBranches', () => {
     it('should return a new tree matches the filter method with default children key', () => {

@@ -1,4 +1,4 @@
-import flatToTree from '../src/flatToTree';
+import { flatToTree } from '../src';
 
 describe('flatArrayToTree', () => {
     it('should return the correct tree list with default options', () => {
