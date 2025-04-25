@@ -184,3 +184,52 @@ console.log(result)
 //  { id: '1', value: 1, children: [{ id: '1-1', value: 2 }] }
 // ]
 ```
+
+#### [measureText](https://github.com/ViaColby/utils/blob/main/src/measureText.ts#L7)
+可以测量文字在html中所占的长度(单位：px)
+
+|    参数    | 是否必需 |   类型   |    说明    |
+|:--------:|:----:|:------:|:--------:|
+|   text   | true | string  | 需要测量的文字  |
+|   font   | true | string | css font |
+
+```js
+const width = measureText('test text', 'italic bold 1.2em')
+console.log(width)
+```
+
+#### [Scheduler类](https://github.com/ViaColby/utils/blob/main/src/scheduler.ts#L15)
+可以通过该类创建一个并发任务队列，默认并发数为5
+
+|  参数  | 是否必需  |   类型   |  说明   |
+|:----:|:-----:|:------:|:-----:|
+| max  | false | number | 最大并发数 |
+
+
+|    方法     |                     参数                     |              说明               |
+|:---------:|:------------------------------------------:|:-----------------------------:|
+|    add    | (fn: () => Promise<any>, priority: number) | 将任务加入队列，priority为优先级，值越大优先级越高 |
+|   pause   |                     -                      |             暂停队列              |
+|  resume   |                     -                      |             恢复队列              |
+|   clear   |                     -                      |             清空队列              |
+| getStatus |                     -                      |           获取任务队列状态            |
+
+```js
+const getData = async () => {
+  const res = await request()
+}
+
+const scheduler = new Scheduler(1)
+
+// 添加任务
+scheduler.add(() => getData(), 1)
+scheduler.add(() => getData(), 2)
+scheduler.add(() => getData(), 3)
+
+scheduler.pause() // 暂停
+scheduler.resume() // 恢复
+scheduler.clear() // 清空队列
+
+console.log(scheduler.getStatus()) // 获取任务状态
+'{ max: 最大并发数, running: 正在执行的任务数, queued: 队列中的任务数, isPaused: 是否暂停, nextTaskPriority: 下一个任务的优先级 }'
+```
